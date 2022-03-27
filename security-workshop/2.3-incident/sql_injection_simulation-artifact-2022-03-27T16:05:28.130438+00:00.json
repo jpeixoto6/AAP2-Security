@@ -1,0 +1,87 @@
+{
+    "version": "1.0.0",
+    "plays": [
+        {
+            "playbook": "/home/student1/security-workshop/2.3-incident/sql_injection_simulation.yml",
+            "playbook_uuid": "a96e7a0a-0f3f-4df5-afab-e8ec365445de",
+            "play": "start sql injection simulation",
+            "play_uuid": "c6e9b3cb-e0ec-a824-aed0-00000000000b",
+            "play_pattern": "attacker",
+            "name": "start sql injection simulation",
+            "pattern": "attacker",
+            "uuid": "c6e9b3cb-e0ec-a824-aed0-00000000000b",
+            "__play_name": "start sql injection simulation",
+            "tasks": [
+                {
+                    "playbook": "/home/student1/security-workshop/2.3-incident/sql_injection_simulation.yml",
+                    "playbook_uuid": "a96e7a0a-0f3f-4df5-afab-e8ec365445de",
+                    "play": "start sql injection simulation",
+                    "play_uuid": "c6e9b3cb-e0ec-a824-aed0-00000000000b",
+                    "play_pattern": "attacker",
+                    "task": "simulate sql injection attack every 5 seconds",
+                    "task_uuid": "c6e9b3cb-e0ec-a824-aed0-00000000000d",
+                    "task_action": "shell",
+                    "task_args": "",
+                    "task_path": "/home/student1/security-workshop/2.3-incident/sql_injection_simulation.yml:8",
+                    "host": "attacker",
+                    "uuid": "e18da95e-bf23-4d3d-a110-2b74ad9eea34",
+                    "__host": "attacker",
+                    "__result": "OK",
+                    "__changed": true,
+                    "__duration": "1s",
+                    "__number": 0,
+                    "__task": "simulate sql injection attack every 5 seconds",
+                    "__task_action": "shell",
+                    "remote_addr": "attacker",
+                    "res": {
+                        "changed": true,
+                        "end": "2022-03-27 16:05:27.665199",
+                        "stdout": "",
+                        "cmd": "/sbin/daemonize /usr/bin/watch -n 5 curl -m 2 -s http://172.17.149.165/sql_injection_simulation",
+                        "rc": 0,
+                        "start": "2022-03-27 16:05:27.661122",
+                        "stderr": "",
+                        "delta": "0:00:00.004077",
+                        "invocation": {
+                            "module_args": {
+                                "creates": null,
+                                "executable": null,
+                                "_uses_shell": true,
+                                "strip_empty_ends": true,
+                                "_raw_params": "/sbin/daemonize /usr/bin/watch -n 5 curl -m 2 -s http://172.17.149.165/sql_injection_simulation",
+                                "removes": null,
+                                "argv": null,
+                                "warn": false,
+                                "chdir": null,
+                                "stdin_add_newline": true,
+                                "stdin": null
+                            }
+                        },
+                        "stdout_lines": [],
+                        "stderr_lines": [],
+                        "ansible_facts": {
+                            "discovered_interpreter_python": "/usr/bin/python"
+                        },
+                        "_ansible_no_log": false
+                    },
+                    "start": "2022-03-27T16:05:26.652774",
+                    "end": "2022-03-27T16:05:27.716589",
+                    "duration": 1.063815,
+                    "event_loop": null
+                }
+            ]
+        }
+    ],
+    "stdout": [
+        "",
+        "PLAY [start sql injection simulation] ******************************************",
+        "",
+        "TASK [simulate sql injection attack every 5 seconds] ***************************",
+        "\u001b[0;33mchanged: [attacker]\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;33mattacker\u001b[0m                   : \u001b[0;32mok=1   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "status": "successful",
+    "status_color": 10
+}

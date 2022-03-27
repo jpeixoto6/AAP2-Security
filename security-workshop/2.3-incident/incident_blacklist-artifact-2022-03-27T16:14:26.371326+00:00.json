@@ -1,0 +1,965 @@
+{
+    "version": "1.0.0",
+    "plays": [
+        {
+            "playbook": "/home/student1/security-workshop/2.3-incident/incident_blacklist.yml",
+            "playbook_uuid": "5bbc8b34-b73b-432e-8da8-19356eee5373",
+            "play": "Blacklist attacker",
+            "play_uuid": "ee6c4383-1dc6-9289-4276-00000000000b",
+            "play_pattern": "checkpoint",
+            "name": "Blacklist attacker",
+            "pattern": "checkpoint",
+            "uuid": "ee6c4383-1dc6-9289-4276-00000000000b",
+            "__play_name": "Blacklist attacker",
+            "tasks": [
+                {
+                    "playbook": "/home/student1/security-workshop/2.3-incident/incident_blacklist.yml",
+                    "playbook_uuid": "5bbc8b34-b73b-432e-8da8-19356eee5373",
+                    "play": "Blacklist attacker",
+                    "play_uuid": "ee6c4383-1dc6-9289-4276-00000000000b",
+                    "play_pattern": "checkpoint",
+                    "task": "Gathering Facts",
+                    "task_uuid": "ee6c4383-1dc6-9289-4276-000000000014",
+                    "task_action": "gather_facts",
+                    "task_args": "",
+                    "task_path": "/home/student1/security-workshop/2.3-incident/incident_blacklist.yml:2",
+                    "host": "checkpoint",
+                    "uuid": "bf8ea46d-7e76-4e54-b756-374d9897cd76",
+                    "__host": "checkpoint",
+                    "__result": "OK",
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__number": 0,
+                    "__task": "Gathering Facts",
+                    "__task_action": "gather_facts",
+                    "remote_addr": "checkpoint",
+                    "res": {
+                        "ansible_facts": {
+                            "ansible_lsb": {},
+                            "ansible_apparmor": {
+                                "status": "disabled"
+                            },
+                            "ansible_fibre_channel_wwn": [],
+                            "ansible_distribution": "RedHat",
+                            "ansible_distribution_release": "Ootpa",
+                            "ansible_distribution_version": "8.4",
+                            "ansible_distribution_major_version": "8",
+                            "ansible_distribution_file_path": "/etc/redhat-release",
+                            "ansible_distribution_file_variety": "RedHat",
+                            "ansible_distribution_file_parsed": true,
+                            "ansible_distribution_file_search_string": "Red Hat",
+                            "ansible_os_family": "RedHat",
+                            "ansible_system": "Linux",
+                            "ansible_kernel": "4.18.0-348.12.2.el8_5.x86_64",
+                            "ansible_kernel_version": "#1 SMP Mon Jan 17 07:06:06 EST 2022",
+                            "ansible_machine": "x86_64",
+                            "ansible_python_version": "3.8.6",
+                            "ansible_fqdn": "196670f9f702",
+                            "ansible_hostname": "196670f9f702",
+                            "ansible_nodename": "196670f9f702",
+                            "ansible_domain": "",
+                            "ansible_userspace_bits": "64",
+                            "ansible_architecture": "x86_64",
+                            "ansible_userspace_architecture": "x86_64",
+                            "ansible_virtualization_type": "container",
+                            "ansible_virtualization_role": "guest",
+                            "ansible_virtualization_tech_guest": [
+                                "xen",
+                                "container"
+                            ],
+                            "ansible_virtualization_tech_host": [],
+                            "ansible_selinux_python_present": true,
+                            "ansible_selinux": {
+                                "status": "disabled"
+                            },
+                            "ansible_cmdline": {
+                                "BOOT_IMAGE": "(hd0,gpt2)/boot/vmlinuz-4.18.0-348.12.2.el8_5.x86_64",
+                                "root": "UUID=ea34d7b4-bd16-43bd-8a0c-c534a23a591a",
+                                "console": "tty0",
+                                "net.ifnames": "0",
+                                "rd.blacklist": "nouveau",
+                                "nvme_core.io_timeout": "4294967295",
+                                "crashkernel": "auto"
+                            },
+                            "ansible_proc_cmdline": {
+                                "BOOT_IMAGE": "(hd0,gpt2)/boot/vmlinuz-4.18.0-348.12.2.el8_5.x86_64",
+                                "root": "UUID=ea34d7b4-bd16-43bd-8a0c-c534a23a591a",
+                                "console": [
+                                    "ttyS0,115200n8",
+                                    "tty0"
+                                ],
+                                "net.ifnames": "0",
+                                "rd.blacklist": "nouveau",
+                                "nvme_core.io_timeout": "4294967295",
+                                "crashkernel": "auto"
+                            },
+                            "ansible_hostnqn": "",
+                            "ansible_python": {
+                                "version": {
+                                    "major": 3,
+                                    "minor": 8,
+                                    "micro": 6,
+                                    "releaselevel": "final",
+                                    "serial": 0
+                                },
+                                "version_info": [
+                                    3,
+                                    8,
+                                    6,
+                                    "final",
+                                    0
+                                ],
+                                "executable": "/usr/bin/python",
+                                "has_sslcontext": true,
+                                "type": "cpython"
+                            },
+                            "ansible_is_chroot": false,
+                            "ansible_dns": {
+                                "search": [
+                                    "ec2.internal",
+                                    "example.com"
+                                ],
+                                "nameservers": [
+                                    "10.0.2.3",
+                                    "172.16.0.2"
+                                ]
+                            },
+                            "ansible_user_id": "root",
+                            "ansible_user_uid": 0,
+                            "ansible_user_gid": 0,
+                            "ansible_user_gecos": "root",
+                            "ansible_user_dir": "/root",
+                            "ansible_user_shell": "/bin/bash",
+                            "ansible_real_user_id": 0,
+                            "ansible_effective_user_id": 0,
+                            "ansible_real_group_id": 0,
+                            "ansible_effective_group_id": 0,
+                            "ansible_processor": [
+                                "0",
+                                "GenuineIntel",
+                                "Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz",
+                                "1",
+                                "GenuineIntel",
+                                "Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz",
+                                "2",
+                                "GenuineIntel",
+                                "Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz",
+                                "3",
+                                "GenuineIntel",
+                                "Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz"
+                            ],
+                            "ansible_processor_count": 1,
+                            "ansible_processor_cores": 2,
+                            "ansible_processor_threads_per_core": 2,
+                            "ansible_processor_vcpus": 4,
+                            "ansible_processor_nproc": 4,
+                            "ansible_memtotal_mb": 15829,
+                            "ansible_memfree_mb": 3737,
+                            "ansible_swaptotal_mb": 0,
+                            "ansible_swapfree_mb": 0,
+                            "ansible_memory_mb": {
+                                "real": {
+                                    "total": 15829,
+                                    "used": 12092,
+                                    "free": 3737
+                                },
+                                "nocache": {
+                                    "free": 12616,
+                                    "used": 3213
+                                },
+                                "swap": {
+                                    "total": 0,
+                                    "free": 0,
+                                    "used": 0,
+                                    "cached": 0
+                                }
+                            },
+                            "ansible_bios_date": "08/24/2006",
+                            "ansible_bios_vendor": "Xen",
+                            "ansible_bios_version": "4.11.amazon",
+                            "ansible_board_asset_tag": "NA",
+                            "ansible_board_name": "NA",
+                            "ansible_board_serial": "NA",
+                            "ansible_board_vendor": "NA",
+                            "ansible_board_version": "NA",
+                            "ansible_chassis_asset_tag": "NA",
+                            "ansible_chassis_serial": "NA",
+                            "ansible_chassis_vendor": "Xen",
+                            "ansible_chassis_version": "NA",
+                            "ansible_form_factor": "Other",
+                            "ansible_product_name": "HVM domU",
+                            "ansible_product_serial": "NA",
+                            "ansible_product_uuid": "NA",
+                            "ansible_product_version": "4.11.amazon",
+                            "ansible_system_vendor": "Xen",
+                            "ansible_devices": {
+                                "xvda": {
+                                    "virtual": 1,
+                                    "links": {
+                                        "ids": [],
+                                        "uuids": [],
+                                        "labels": [],
+                                        "masters": []
+                                    },
+                                    "vendor": null,
+                                    "model": null,
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "removable": "0",
+                                    "support_discard": "0",
+                                    "partitions": {
+                                        "xvda2": {
+                                            "links": {
+                                                "ids": [],
+                                                "uuids": [],
+                                                "labels": [],
+                                                "masters": []
+                                            },
+                                            "start": "4096",
+                                            "sectors": "83881951",
+                                            "sectorsize": 512,
+                                            "size": "40.00 GB",
+                                            "uuid": null,
+                                            "holders": []
+                                        },
+                                        "xvda1": {
+                                            "links": {
+                                                "ids": [],
+                                                "uuids": [],
+                                                "labels": [],
+                                                "masters": []
+                                            },
+                                            "start": "2048",
+                                            "sectors": "2048",
+                                            "sectorsize": 512,
+                                            "size": "1.00 MB",
+                                            "uuid": null,
+                                            "holders": []
+                                        }
+                                    },
+                                    "rotational": "0",
+                                    "scheduler_mode": "mq-deadline",
+                                    "sectors": "83886080",
+                                    "sectorsize": "512",
+                                    "size": "40.00 GB",
+                                    "host": "",
+                                    "holders": []
+                                }
+                            },
+                            "ansible_device_links": {
+                                "ids": {},
+                                "uuids": {},
+                                "labels": {},
+                                "masters": {}
+                            },
+                            "ansible_uptime_seconds": 70040,
+                            "ansible_mounts": [
+                                {
+                                    "mount": "/runner",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/etc/hostname",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/etc/hosts",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/tmp/ssh-2k511RQ6kFwo",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/etc/ansible",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/runner/artifacts",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/root/.ssh",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/etc/resolv.conf",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/run/.containerenv",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/run/secrets",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/home/student1/lab_inventory",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/home/runner/.ssh",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "mount": "/home/student1/security-workshop/2.3-incident",
+                                    "device": "/dev/xvda2",
+                                    "fstype": "xfs",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota,bind",
+                                    "size_total": 42937069568,
+                                    "size_available": 31983292416,
+                                    "block_size": 4096,
+                                    "block_total": 10482683,
+                                    "block_available": 7808421,
+                                    "block_used": 2674262,
+                                    "inode_total": 20970480,
+                                    "inode_available": 20703802,
+                                    "inode_used": 266678,
+                                    "uuid": "N/A"
+                                }
+                            ],
+                            "ansible_local": {},
+                            "ansible_system_capabilities_enforced": "True",
+                            "ansible_system_capabilities": [
+                                "cap_chown",
+                                "cap_dac_override",
+                                "cap_fowner",
+                                "cap_fsetid",
+                                "cap_kill",
+                                "cap_setgid",
+                                "cap_setuid",
+                                "cap_setpcap",
+                                "cap_net_bind_service",
+                                "cap_net_raw",
+                                "cap_sys_chroot",
+                                "cap_setfcap+eip"
+                            ],
+                            "ansible_iscsi_iqn": "",
+                            "ansible_date_time": {
+                                "year": "2022",
+                                "month": "03",
+                                "weekday": "Sunday",
+                                "weekday_number": "0",
+                                "weeknumber": "12",
+                                "day": "27",
+                                "hour": "16",
+                                "minute": "14",
+                                "second": "04",
+                                "epoch": "1648397644",
+                                "date": "2022-03-27",
+                                "time": "16:14:04",
+                                "iso8601_micro": "2022-03-27T16:14:04.426580Z",
+                                "iso8601": "2022-03-27T16:14:04Z",
+                                "iso8601_basic": "20220327T161404426580",
+                                "iso8601_basic_short": "20220327T161404",
+                                "tz": "UTC",
+                                "tz_dst": "UTC",
+                                "tz_offset": "+0000"
+                            },
+                            "ansible_fips": false,
+                            "ansible_pkg_mgr": "dnf",
+                            "ansible_service_mgr": "dumb-init",
+                            "gather_subset": [
+                                "all"
+                            ],
+                            "module_setup": true,
+                            "discovered_interpreter_python": "/usr/bin/python"
+                        },
+                        "warnings": [],
+                        "deprecations": [],
+                        "_ansible_verbose_override": true,
+                        "_ansible_no_log": false,
+                        "changed": false
+                    },
+                    "start": "2022-03-27T16:14:02.865782",
+                    "end": "2022-03-27T16:14:04.544332",
+                    "duration": 1.67855,
+                    "event_loop": null
+                },
+                {
+                    "playbook": "/home/student1/security-workshop/2.3-incident/incident_blacklist.yml",
+                    "playbook_uuid": "5bbc8b34-b73b-432e-8da8-19356eee5373",
+                    "play": "Blacklist attacker",
+                    "play_uuid": "ee6c4383-1dc6-9289-4276-00000000000b",
+                    "play_pattern": "checkpoint",
+                    "task": "Create source IP host object",
+                    "task_uuid": "ee6c4383-1dc6-9289-4276-00000000000d",
+                    "task_action": "checkpoint_host",
+                    "task_args": "",
+                    "task_path": "/home/student1/security-workshop/2.3-incident/incident_blacklist.yml:10",
+                    "host": "checkpoint",
+                    "uuid": "7c6a3802-f061-454a-a732-bc4bba7557ce",
+                    "__host": "checkpoint",
+                    "__result": "OK",
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__number": 1,
+                    "__task": "Create source IP host object",
+                    "__task_action": "checkpoint_host",
+                    "remote_addr": "checkpoint",
+                    "res": {
+                        "changed": false,
+                        "checkpoint_session_uid": "7e4060e2-b69e-4437-84a8-c12b6488cfd2",
+                        "invocation": {
+                            "module_args": {
+                                "name": "asa-172.17.97.104",
+                                "ip_address": "172.17.97.104",
+                                "state": "present",
+                                "auto_publish_session": true,
+                                "policy_package": "standard",
+                                "auto_install_policy": true,
+                                "targets": null
+                            }
+                        },
+                        "_ansible_no_log": false
+                    },
+                    "start": "2022-03-27T16:14:04.573687",
+                    "end": "2022-03-27T16:14:06.414991",
+                    "duration": 1.841304,
+                    "event_loop": null
+                },
+                {
+                    "playbook": "/home/student1/security-workshop/2.3-incident/incident_blacklist.yml",
+                    "playbook_uuid": "5bbc8b34-b73b-432e-8da8-19356eee5373",
+                    "play": "Blacklist attacker",
+                    "play_uuid": "ee6c4383-1dc6-9289-4276-00000000000b",
+                    "play_pattern": "checkpoint",
+                    "task": "Create destination IP host object",
+                    "task_uuid": "ee6c4383-1dc6-9289-4276-00000000000e",
+                    "task_action": "checkpoint_host",
+                    "task_args": "",
+                    "task_path": "/home/student1/security-workshop/2.3-incident/incident_blacklist.yml:15",
+                    "host": "checkpoint",
+                    "uuid": "4aea0c7a-d6ab-4926-8d6a-2c5f4c598c70",
+                    "__host": "checkpoint",
+                    "__result": "OK",
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__number": 2,
+                    "__task": "Create destination IP host object",
+                    "__task_action": "checkpoint_host",
+                    "remote_addr": "checkpoint",
+                    "res": {
+                        "changed": false,
+                        "checkpoint_session_uid": "7e4060e2-b69e-4437-84a8-c12b6488cfd2",
+                        "invocation": {
+                            "module_args": {
+                                "name": "asa-172.17.149.165",
+                                "ip_address": "172.17.149.165",
+                                "state": "present",
+                                "auto_publish_session": true,
+                                "policy_package": "standard",
+                                "auto_install_policy": true,
+                                "targets": null
+                            }
+                        },
+                        "_ansible_no_log": false
+                    },
+                    "start": "2022-03-27T16:14:06.428212",
+                    "end": "2022-03-27T16:14:07.380491",
+                    "duration": 0.952279,
+                    "event_loop": null
+                },
+                {
+                    "playbook": "/home/student1/security-workshop/2.3-incident/incident_blacklist.yml",
+                    "playbook_uuid": "5bbc8b34-b73b-432e-8da8-19356eee5373",
+                    "play": "Blacklist attacker",
+                    "play_uuid": "ee6c4383-1dc6-9289-4276-00000000000b",
+                    "play_pattern": "checkpoint",
+                    "task": "Create access rule to deny access from source to destination",
+                    "task_uuid": "ee6c4383-1dc6-9289-4276-00000000000f",
+                    "task_action": "checkpoint_access_rule",
+                    "task_args": "",
+                    "task_path": "/home/student1/security-workshop/2.3-incident/incident_blacklist.yml:20",
+                    "host": "checkpoint",
+                    "uuid": "68037e53-d512-4a98-a1e0-a0fd10540aab",
+                    "__host": "checkpoint",
+                    "__result": "OK",
+                    "__changed": true,
+                    "__duration": "2s",
+                    "__number": 3,
+                    "__task": "Create access rule to deny access from source to destination",
+                    "__task_action": "checkpoint_access_rule",
+                    "remote_addr": "checkpoint",
+                    "res": {
+                        "changed": true,
+                        "checkpoint_access_rules": {
+                            "uid": "a5bbe62d-f671-4651-9dda-a9bc3a2a81ca",
+                            "name": "asa-accept-172.17.97.104-to-172.17.149.165",
+                            "type": "access-rule",
+                            "domain": {
+                                "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+                                "name": "SMC User",
+                                "domain-type": "domain"
+                            },
+                            "track": {
+                                "type": {
+                                    "uid": "598ead32-aa42-4615-90ed-f51a5928d41d",
+                                    "name": "Log",
+                                    "type": "Track",
+                                    "domain": {
+                                        "uid": "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+                                        "name": "Check Point Data",
+                                        "domain-type": "data domain"
+                                    }
+                                },
+                                "per-session": false,
+                                "per-connection": true,
+                                "accounting": false,
+                                "enable-firewall-session": false,
+                                "alert": "none"
+                            },
+                            "layer": "63b7fe60-76d2-4287-bca5-21af87337b0a",
+                            "source": [
+                                {
+                                    "uid": "54af52c0-f503-474b-8140-f80cae4e0c6e",
+                                    "name": "asa-172.17.97.104",
+                                    "type": "host",
+                                    "domain": {
+                                        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+                                        "name": "SMC User",
+                                        "domain-type": "domain"
+                                    },
+                                    "ipv4-address": "172.17.97.104"
+                                }
+                            ],
+                            "source-negate": false,
+                            "destination": [
+                                {
+                                    "uid": "3661f24c-edc4-4b1e-8fbf-1e1ecfe1d2d3",
+                                    "name": "asa-172.17.149.165",
+                                    "type": "host",
+                                    "domain": {
+                                        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+                                        "name": "SMC User",
+                                        "domain-type": "domain"
+                                    },
+                                    "ipv4-address": "172.17.149.165"
+                                }
+                            ],
+                            "destination-negate": false,
+                            "service": [
+                                {
+                                    "uid": "97aeb369-9aea-11d5-bd16-0090272ccb30",
+                                    "name": "Any",
+                                    "type": "CpmiAnyObject",
+                                    "domain": {
+                                        "uid": "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+                                        "name": "Check Point Data",
+                                        "domain-type": "data domain"
+                                    }
+                                }
+                            ],
+                            "service-negate": false,
+                            "vpn": [
+                                {
+                                    "uid": "97aeb369-9aea-11d5-bd16-0090272ccb30",
+                                    "name": "Any",
+                                    "type": "CpmiAnyObject",
+                                    "domain": {
+                                        "uid": "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+                                        "name": "Check Point Data",
+                                        "domain-type": "data domain"
+                                    }
+                                }
+                            ],
+                            "action": {
+                                "uid": "6c488338-8eec-4103-ad21-cd461ac2c473",
+                                "name": "Drop",
+                                "type": "RulebaseAction",
+                                "domain": {
+                                    "uid": "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+                                    "name": "Check Point Data",
+                                    "domain-type": "data domain"
+                                }
+                            },
+                            "action-settings": {},
+                            "content": [
+                                {
+                                    "uid": "97aeb369-9aea-11d5-bd16-0090272ccb30",
+                                    "name": "Any",
+                                    "type": "CpmiAnyObject",
+                                    "domain": {
+                                        "uid": "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+                                        "name": "Check Point Data",
+                                        "domain-type": "data domain"
+                                    }
+                                }
+                            ],
+                            "content-negate": false,
+                            "content-direction": "any",
+                            "time": [
+                                {
+                                    "uid": "97aeb369-9aea-11d5-bd16-0090272ccb30",
+                                    "name": "Any",
+                                    "type": "CpmiAnyObject",
+                                    "domain": {
+                                        "uid": "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+                                        "name": "Check Point Data",
+                                        "domain-type": "data domain"
+                                    }
+                                }
+                            ],
+                            "custom-fields": {
+                                "field-1": "",
+                                "field-2": "",
+                                "field-3": ""
+                            },
+                            "meta-info": {
+                                "lock": "locked by current session",
+                                "validation-state": "ok",
+                                "last-modify-time": {
+                                    "posix": 1648397648803,
+                                    "iso-8601": "2022-03-27T16:14+0000"
+                                },
+                                "last-modifier": "admin",
+                                "creation-time": {
+                                    "posix": 1648393288466,
+                                    "iso-8601": "2022-03-27T15:01+0000"
+                                },
+                                "creator": "admin"
+                            },
+                            "comments": "",
+                            "enabled": true,
+                            "install-on": [
+                                {
+                                    "uid": "6c488338-8eec-4103-ad21-cd461ac2c476",
+                                    "name": "Policy Targets",
+                                    "type": "Global",
+                                    "domain": {
+                                        "uid": "a0bbbc99-adef-4ef8-bb6d-defdefdefdef",
+                                        "name": "Check Point Data",
+                                        "domain-type": "data domain"
+                                    }
+                                }
+                            ]
+                        },
+                        "checkpoint_session_uid": "7e4060e2-b69e-4437-84a8-c12b6488cfd2",
+                        "invocation": {
+                            "module_args": {
+                                "auto_install_policy": true,
+                                "auto_publish_session": true,
+                                "layer": "Network",
+                                "position": "top",
+                                "name": "asa-accept-172.17.97.104-to-172.17.149.165",
+                                "source": "asa-172.17.97.104",
+                                "destination": "asa-172.17.149.165",
+                                "action": "drop",
+                                "enabled": true,
+                                "state": "present",
+                                "policy_package": "standard",
+                                "targets": null
+                            }
+                        },
+                        "_ansible_no_log": false
+                    },
+                    "start": "2022-03-27T16:14:07.389806",
+                    "end": "2022-03-27T16:14:09.460968",
+                    "duration": 2.071162,
+                    "event_loop": null
+                },
+                {
+                    "playbook": "/home/student1/security-workshop/2.3-incident/incident_blacklist.yml",
+                    "playbook_uuid": "5bbc8b34-b73b-432e-8da8-19356eee5373",
+                    "play": "Blacklist attacker",
+                    "play_uuid": "ee6c4383-1dc6-9289-4276-00000000000b",
+                    "play_pattern": "checkpoint",
+                    "task": "Install policy",
+                    "task_uuid": "ee6c4383-1dc6-9289-4276-000000000010",
+                    "task_action": "cp_mgmt_install_policy",
+                    "task_args": "",
+                    "task_path": "/home/student1/security-workshop/2.3-incident/incident_blacklist.yml:31",
+                    "host": "checkpoint",
+                    "uuid": "4feeff47-e8a7-4a4c-82a8-a6c36b8dfd5d",
+                    "__host": "checkpoint",
+                    "__result": "OK",
+                    "__changed": true,
+                    "__duration": "16s",
+                    "__number": 4,
+                    "__task": "Install policy",
+                    "__task_action": "cp_mgmt_install_policy",
+                    "remote_addr": "checkpoint",
+                    "res": {
+                        "changed": true,
+                        "install-policy": {
+                            "tasks": [
+                                {
+                                    "uid": "02e3cbb0-6891-42e0-a242-744799c0e6f9",
+                                    "type": "task",
+                                    "domain": {
+                                        "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+                                        "name": "SMC User",
+                                        "domain-type": "domain"
+                                    },
+                                    "task-id": "08d00ce7-60a5-44e8-8aa3-22c61bad0563",
+                                    "task-name": "Policy installation - Standard",
+                                    "status": "succeeded",
+                                    "progress-percentage": 100,
+                                    "start-time": {
+                                        "posix": 1648397650608,
+                                        "iso-8601": "2022-03-27T16:14+0000"
+                                    },
+                                    "last-update-time": {
+                                        "posix": 1648397664384,
+                                        "iso-8601": "2022-03-27T16:14+0000"
+                                    },
+                                    "suppressed": false,
+                                    "task-details": [
+                                        {
+                                            "uid": "27fedc8a-27f1-44a7-97dc-131a885495ef",
+                                            "name": null,
+                                            "domain": {
+                                                "uid": "41e821a0-3720-11e3-aa6e-0800200c9fde",
+                                                "name": "SMC User",
+                                                "domain-type": "domain"
+                                            },
+                                            "color": "black",
+                                            "statusCode": "succeeded",
+                                            "statusDescription": "Succeeded",
+                                            "taskNotification": "02e3cbb0-6891-42e0-a242-744799c0e6f9",
+                                            "gatewayId": "48c56485-580a-40d7-8d0b-ee4ab62beda7",
+                                            "policyId": "e81f131f-085b-4c0c-b6a7-2257fa69f848",
+                                            "runningStages": [],
+                                            "waitingStages": [],
+                                            "cluster": false,
+                                            "meta-info": {
+                                                "validation-state": "ok",
+                                                "last-modify-time": {
+                                                    "posix": 1648397660152,
+                                                    "iso-8601": "2022-03-27T16:14+0000"
+                                                },
+                                                "last-modifier": "System",
+                                                "creation-time": {
+                                                    "posix": 1648397650843,
+                                                    "iso-8601": "2022-03-27T16:14+0000"
+                                                },
+                                                "creator": "System"
+                                            },
+                                            "tags": [],
+                                            "icon": "General/globalsNa",
+                                            "comments": "",
+                                            "display-name": "",
+                                            "customFields": null,
+                                            "gatewayName": "myngfw",
+                                            "revision": "7e4060e2-b69e-4437-84a8-c12b6488cfd2"
+                                        }
+                                    ],
+                                    "comments": "Installation succeeded on myngfw",
+                                    "color": "black",
+                                    "icon": "General/globalsNa",
+                                    "tags": [],
+                                    "meta-info": {
+                                        "lock": "unlocked",
+                                        "validation-state": "ok",
+                                        "last-modify-time": {
+                                            "posix": 1648397664389,
+                                            "iso-8601": "2022-03-27T16:14+0000"
+                                        },
+                                        "last-modifier": "System",
+                                        "creation-time": {
+                                            "posix": 1648397650609,
+                                            "iso-8601": "2022-03-27T16:14+0000"
+                                        },
+                                        "creator": "admin"
+                                    },
+                                    "read-only": false
+                                }
+                            ]
+                        },
+                        "invocation": {
+                            "module_args": {
+                                "policy_package": "standard",
+                                "install_on_all_cluster_members_or_fail": true,
+                                "wait_for_task": true,
+                                "wait_for_task_timeout": 30,
+                                "targets": null,
+                                "access": null,
+                                "desktop_security": null,
+                                "qos": null,
+                                "threat_prevention": null,
+                                "prepare_only": null,
+                                "revision": null,
+                                "version": null
+                            }
+                        },
+                        "_ansible_no_log": false,
+                        "failed_when_result": false
+                    },
+                    "start": "2022-03-27T16:14:09.469778",
+                    "end": "2022-03-27T16:14:25.712002",
+                    "duration": 16.242224,
+                    "event_loop": null
+                }
+            ]
+        }
+    ],
+    "stdout": [
+        "",
+        "PLAY [Blacklist attacker] ******************************************************",
+        "",
+        "TASK [Gathering Facts] *********************************************************",
+        "\u001b[0;32mok: [checkpoint]\u001b[0m",
+        "",
+        "TASK [Create source IP host object] ********************************************",
+        "\u001b[0;32mok: [checkpoint]\u001b[0m",
+        "",
+        "TASK [Create destination IP host object] ***************************************",
+        "\u001b[0;32mok: [checkpoint]\u001b[0m",
+        "",
+        "TASK [Create access rule to deny access from source to destination] ************",
+        "\u001b[0;33mchanged: [checkpoint]\u001b[0m",
+        "",
+        "TASK [Install policy] **********************************************************",
+        "\u001b[0;33mchanged: [checkpoint]\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;33mcheckpoint\u001b[0m                 : \u001b[0;32mok=5   \u001b[0m \u001b[0;33mchanged=2   \u001b[0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "status": "successful",
+    "status_color": 10
+}

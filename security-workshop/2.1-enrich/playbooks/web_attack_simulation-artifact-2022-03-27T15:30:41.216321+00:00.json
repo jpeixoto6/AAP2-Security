@@ -1,0 +1,87 @@
+{
+    "version": "1.0.0",
+    "plays": [
+        {
+            "playbook": "/home/student1/security-workshop/2.1-enrich/playbooks/web_attack_simulation.yml",
+            "playbook_uuid": "c117d926-d2ea-415c-9674-a4f04bce2fef",
+            "play": "start attack",
+            "play_uuid": "a66d187e-1c63-f03d-ea7f-00000000000b",
+            "play_pattern": "attacker",
+            "name": "start attack",
+            "pattern": "attacker",
+            "uuid": "a66d187e-1c63-f03d-ea7f-00000000000b",
+            "__play_name": "start attack",
+            "tasks": [
+                {
+                    "playbook": "/home/student1/security-workshop/2.1-enrich/playbooks/web_attack_simulation.yml",
+                    "playbook_uuid": "c117d926-d2ea-415c-9674-a4f04bce2fef",
+                    "play": "start attack",
+                    "play_uuid": "a66d187e-1c63-f03d-ea7f-00000000000b",
+                    "play_pattern": "attacker",
+                    "task": "simulate attack every 5 seconds",
+                    "task_uuid": "a66d187e-1c63-f03d-ea7f-00000000000d",
+                    "task_action": "shell",
+                    "task_args": "",
+                    "task_path": "/home/student1/security-workshop/2.1-enrich/playbooks/web_attack_simulation.yml:8",
+                    "host": "attacker",
+                    "uuid": "4df2c40a-165b-41c0-b1ea-e65c6003dc35",
+                    "__host": "attacker",
+                    "__result": "OK",
+                    "__changed": true,
+                    "__duration": "1s",
+                    "__number": 0,
+                    "__task": "simulate attack every 5 seconds",
+                    "__task_action": "shell",
+                    "remote_addr": "attacker",
+                    "res": {
+                        "changed": true,
+                        "end": "2022-03-27 15:30:40.720588",
+                        "stdout": "",
+                        "cmd": "/sbin/daemonize /usr/bin/watch -n 5 curl -m 2 -s http://172.17.149.165/web_attack_simulation",
+                        "rc": 0,
+                        "start": "2022-03-27 15:30:40.716260",
+                        "stderr": "",
+                        "delta": "0:00:00.004328",
+                        "invocation": {
+                            "module_args": {
+                                "creates": null,
+                                "executable": null,
+                                "_uses_shell": true,
+                                "strip_empty_ends": true,
+                                "_raw_params": "/sbin/daemonize /usr/bin/watch -n 5 curl -m 2 -s http://172.17.149.165/web_attack_simulation",
+                                "removes": null,
+                                "argv": null,
+                                "warn": false,
+                                "chdir": null,
+                                "stdin_add_newline": true,
+                                "stdin": null
+                            }
+                        },
+                        "stdout_lines": [],
+                        "stderr_lines": [],
+                        "ansible_facts": {
+                            "discovered_interpreter_python": "/usr/bin/python"
+                        },
+                        "_ansible_no_log": false
+                    },
+                    "start": "2022-03-27T15:30:39.719773",
+                    "end": "2022-03-27T15:30:40.767017",
+                    "duration": 1.047244,
+                    "event_loop": null
+                }
+            ]
+        }
+    ],
+    "stdout": [
+        "",
+        "PLAY [start attack] ************************************************************",
+        "",
+        "TASK [simulate attack every 5 seconds] *****************************************",
+        "\u001b[0;33mchanged: [attacker]\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;33mattacker\u001b[0m                   : \u001b[0;32mok=1   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "status": "successful",
+    "status_color": 10
+}
