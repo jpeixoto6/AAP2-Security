@@ -1,9 +1,0 @@
-{
-    "version": "1.0.0",
-    "plays": [],
-    "stdout": [
-        "\u001b[0;31mERROR! the playbook: /home/student1/security-workshop/2.1-enrich/playbooks/enrich_log_sources.yml could not be found\u001b[0m"
-    ],
-    "status": "failed",
-    "status_color": 9
-}

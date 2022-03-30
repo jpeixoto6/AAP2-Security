@@ -1,9 +1,0 @@
-{
-    "version": "1.0.0",
-    "plays": [],
-    "stdout": [
-        "playbook: /home/student1/security-workshop/1.2-checkpoint/playbooks/whitelist_attacker.yml"
-    ],
-    "status": "successful",
-    "status_color": 10
-}
