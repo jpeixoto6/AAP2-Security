@@ -1,8 +1,0 @@
----
-- name: Whitelist Attacker
-  hosts: checkpoint
-
-
-  vars:
-    source_ip: "{{ hostvars['attacker']['private_ip2'] }}"
-    destination_ip: "{{ hostvars['snort']['private_ip2'] }}"
